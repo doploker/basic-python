@@ -44,6 +44,9 @@ def statement():
     elif age == 30:
         print ("нажми \"В БОЙ, скуфяра\"")
 
+    a = 0
+    r = a if age == 30 else name
+    print(r)
 
 # statement()
 
@@ -79,7 +82,10 @@ print (slovar['person'])
 print (slovar['person']['age'])
 print (slovar['person'][3])
 
+
 kortej = (1,2,2,2,3,3,3,3,3,3,4,4,5)
+# мало объекм памяти занимает
+# данные не изменяются
 print(kortej)
 print(kortej[0])
 
@@ -90,4 +96,23 @@ for item in spisok:
 for key, value in slovar['person'].items():
     print(key, value)
 
-    
+
+a = set([1,2,3,1,2,3,3,3,1, "sd", "sd"])
+print(a)
+
+"""
+Модули и варианты подключения
+"""
+# import decorator as d
+
+# d.my_string('sad')
+
+from decorator import auth, my_string
+
+a = my_string('name.')
+print(a)
+
+@auth
+def ss(name):
+    return f'sdsad {name}'
+
